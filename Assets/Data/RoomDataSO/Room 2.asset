@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e3c2d56e35d4fa4298d114dd43745af, type: 3}
+  m_Name: Room 2
+  m_EditorClassIdentifier: 
+  roomName: Room 2
+  colorPalette: {fileID: 11400000, guid: 85b30bb46506961418da11fdcf9931f6, type: 2}
+  roomDuration: 15
+  ballSpeed: 10
+  ballSpeedIncrease: 0.1
+  maxBallSpeed: 20
+  ballCount: 1
