@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameOverPanel : RoomPanelBase
 {
@@ -8,15 +9,19 @@ public class GameOverPanel : RoomPanelBase
     public override void InitializePanle(LobbyUIManager uiManager)
     {
         base.InitializePanle(uiManager);
-        PongManager.Instance.OnGameStateChanged += HandleState;
+        SceneManager.sceneLoaded += OnSceneLoaded;
 
         retryButton.onClick.AddListener(OnRetry);
     }
 
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        PongManager.Instance.OnGameStateChanged += HandleState;
+    }
+
     private void OnDisable()
     {
-        if (PongManager.Instance != null)
-            PongManager.Instance.OnGameStateChanged -= HandleState;
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
     private void HandleState(GameState state)

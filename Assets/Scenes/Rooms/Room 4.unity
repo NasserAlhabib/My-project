@@ -1741,7 +1741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35867fd8b94925a4cb78a54f920213f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <PanelType>k__BackingField: 3
+  <PanelType>k__BackingField: 4
   retryButton: {fileID: 1590327787}
 --- !u!1 &970878759
 GameObject:
